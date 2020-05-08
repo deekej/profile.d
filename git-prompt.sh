@@ -119,7 +119,7 @@ _git_dirty_stash() {
 _git_repo() {
   # We might not be in git repository, but user still might want us to use the
   # git prompt... Check if current path of working directory is in config file.
-  if [[ -f "$HOME/.git/promptrc" ]]; then
+  if [[ -f "$HOME/.config/git/promptrc" ]]; then
     while read line; do
       pwd -P | grep "$line" &>/dev/null
 
@@ -128,7 +128,7 @@ _git_repo() {
         BASELINE="$(basename "$line")"
         return  0     # Success (user override) ->> use git prompt
       fi
-    done < "$HOME/.git/promptrc"
+    done < "$HOME/.config/git/promptrc"
   fi
 
   # Are we in folder with accessible git repository?
