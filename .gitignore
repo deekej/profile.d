@@ -1,0 +1,3 @@
+# Ignore everything by default, and use 'git add --force' to add files manually:
+*
+.*
