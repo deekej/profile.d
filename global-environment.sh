@@ -4,7 +4,7 @@
 # Global environment configuration common for both Bash && ZSH:
 # -------------------------------------------------------------
 
-if [[ "$(uname -n)" != Normandy-SR5* ]]; then
+if [[ "$(uname -n)" != Normandy-SR* ]]; then
   # Source 'kubectl' completion on k8s server:
   if command -v kubectl &> /dev/null; then
     if [[ "$SHELL" == *bash ]]; then

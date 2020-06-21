@@ -26,8 +26,7 @@ if [[ "$SHELL" == *bash ]]; then
 
   # --------------------------------- #
 
-  # Get the preferred PS1 settings, if they exists:
-  [ -f /etc/sysconfig/bash-default-prompt ] && source /etc/sysconfig/bash-default-prompt
+  # NOTE: We get the *PS1_COLOR sourced automatically from default-bash-prompt.sh via profile script.
 
   # Set the custom Bash prompt:
   if [ ${EUID} -eq 0 ]; then

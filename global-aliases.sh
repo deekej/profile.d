@@ -30,7 +30,7 @@ alias make='make -j'
 
 # -----------------------------------------------------------------------------
 
-if [[ "$(uname -n)" == Normandy-SR5* ]]; then
+if [[ "$(uname -n)" == Normandy-SR* ]]; then
   # Set logout only if GUI is running:
   if [[ "$TERM" = "xterm" || "$TERM" = "xterm-256color" ]]; then
     alias logout='gnome-session-quit --logout --no-prompt && exit'
