@@ -28,6 +28,14 @@ alias whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
 # -----------------
 alias make='make -j'
 
+# Custom functions:
+# -----------------
+
+function cdl()
+{
+  cd "$1" && ll
+}
+
 # -----------------------------------------------------------------------------
 
 if [[ "$(uname -n)" == Normandy-SR* ]]; then
@@ -72,7 +80,7 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
   alias info='pinfo'
   alias gdb='cgdb'
 
-  alias xwayland='export QT_QPA_PLATFORM=xcb'
+  alias xwayland='export QT_QPA_PLATFORM=xcb; echo "export QT_QPA_PLATFORM=xcb"'
 
   alias -- laptop-font='setfont ter-m32b'
   alias -- display-font='setfont ter-m16v'
