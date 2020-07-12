@@ -112,4 +112,21 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
       grep "\.$VERSION_ID" || \
       echo "Nothing provides: ${1}"
   }
+
+  # Custom launchers to workaround inconsistent desktop switching:
+  alias  firefox-nightly='/usr/libexec/launchers/firefox-nightly'
+  alias          firefox='/usr/libexec/launchers/firefox'
+  alias             gimp='/usr/libexec/launchers/gimp'
+  alias             gvim='/usr/libexec/launchers/gvim'
+  alias         gvimdiff='/usr/libexec/launchers/gvimdiff'
+  alias          hexchat='/usr/libexec/launchers/hexchat'
+  alias             nemo='/usr/libexec/launchers/nemo'
+  alias        photogimp='/usr/libexec/launchers/photogimp'
+  alias    skypeforlinux='/usr/libexec/launchers/skypeforlinux'
+  alias            slack='/usr/libexec/launchers/slack'
+  alias          spotify='/usr/libexec/launchers/spotify'
+  alias telegram-desktop='/usr/libexec/launchers/telegram-desktop'
+  alias       terminator='/usr/libexec/launchers/terminator'
+  alias     virt-manager='/usr/libexec/launchers/vir-manager'
+  alias              vlc='/usr/libexec/launchers/vlc'
 fi
