@@ -82,7 +82,7 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
 
   alias xwayland='export QT_QPA_PLATFORM=xcb; echo "export QT_QPA_PLATFORM=xcb"'
 
-  alias -- laptop-font='setfont ter-m32b'
+  alias -- laptop-font='setfont ter-m20b'
   alias -- display-font='setfont ter-m16v'
 
   # Other section:
