@@ -127,6 +127,6 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
   alias          spotify='/usr/libexec/launchers/spotify'
   alias telegram-desktop='/usr/libexec/launchers/telegram-desktop'
   alias       terminator='/usr/libexec/launchers/terminator'
-  alias     virt-manager='/usr/libexec/launchers/vir-manager'
+  alias     virt-manager='/usr/libexec/launchers/virt-manager'
   alias              vlc='/usr/libexec/launchers/vlc'
 fi
