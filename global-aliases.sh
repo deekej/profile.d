@@ -114,12 +114,17 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
   }
 
   # Custom launchers to workaround inconsistent desktop switching:
+  alias        bluejeans='/usr/libexec/launchers/bluejeans-v2'
+  alias     bluejeans-v2='/usr/libexec/launchers/bluejeans-v2'
+  alias bluejeans-events='/usr/libexec/launchers/bluejeans-events'
   alias  firefox-nightly='/usr/libexec/launchers/firefox-nightly'
   alias          firefox='/usr/libexec/launchers/firefox'
   alias             gimp='/usr/libexec/launchers/gimp'
+  alias      google-chat='/usr/libexec/launchers/google-chat'
   alias             gvim='/usr/libexec/launchers/gvim'
   alias         gvimdiff='/usr/libexec/launchers/gvimdiff'
   alias          hexchat='/usr/libexec/launchers/hexchat'
+  alias         last-app='/usr/libexec/launchers/last-app-switcher'
   alias             nemo='/usr/libexec/launchers/nemo'
   alias        photogimp='/usr/libexec/launchers/photogimp'
   alias    skypeforlinux='/usr/libexec/launchers/skypeforlinux'
