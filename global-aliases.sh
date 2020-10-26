@@ -1,5 +1,13 @@
 # vim: filetype=bash
 
+# --------------------------------------
+# Custom aliases specific for Bash only:
+# --------------------------------------
+if [[ "$SHELL" == *bash ]]; then
+  # NOTE: Oh-my-zsh has its own check when removing multiple files.
+  alias rm='rm -I'
+fi
+
 # -------------------------------------
 # Custom aliases for both ZSH and Bash:
 # -------------------------------------
@@ -12,7 +20,6 @@ alias du='du -h'
 alias la='ls -lhvAF --color=auto'
 alias ll='ls -ohvAF --color=auto --group-directories-first'
 alias lr='ls -ohvAF --color=auto --group-directories-first --reverse'
-alias rm='rm -I'
 
 alias ngrep='grep -n --color=auto'
 alias xclip='xclip -sel clip'
