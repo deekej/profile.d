@@ -14,12 +14,22 @@ fi
 
 # Usability section:
 # ------------------
-alias dd='dd status=progress'
+alias dd='dd conv=fsync status=progress'
 alias df='df -h'
 alias du='du -h'
+
 alias la='ls -lhvAF --color=auto'
+alias li='ls -ohvAF --color=auto --group-directories-first --reverse'
 alias ll='ls -ohvAF --color=auto --group-directories-first'
-alias lr='ls -ohvAF --color=auto --group-directories-first --reverse'
+alias lt='ls -ltFh  --reverse'
+
+alias dul='du -d 1 -h'
+alias duc='du -sh'
+
+alias ll.='ls -ohvAF --color=auto --group-directories-first --directory .*'
+alias lls='ls -1FSsh --reverse'
+
+alias llsr='ls -1FSsh --reverse --recursive'
 
 alias ngrep='grep -n --color=auto'
 alias xclip='xclip -sel clip'
