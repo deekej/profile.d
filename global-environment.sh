@@ -50,4 +50,6 @@ fi
 # so we can override them if necessary:
 if [ -f /etc/profile.d/global-aliases.sh ]; then
   source /etc/profile.d/global-aliases.sh
+elif [ -f ~/.profile.d/global-aliases.sh ]; then
+  source ~/.profile.d/global-aliases.sh
 fi
