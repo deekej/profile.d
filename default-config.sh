@@ -94,11 +94,3 @@ alias rm='rm -i'
 
 # Set normal (sane) umask:
 umask 022
-
-# --------------------------------- #
-
-# Display the fortune-cookie if the system is able to:
-if [ -x /usr/bin/fortune-cookie ]; then
-  tput reset
-  /usr/bin/fortune-cookie
-fi
