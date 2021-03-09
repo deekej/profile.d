@@ -37,6 +37,8 @@ alias xopen='xdg-open'
 
 # Network section:
 # ----------------
+alias ssh-pass='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o GSSAPIAuthentication=no'
+alias scp-pass='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no -o GSSAPIAuthentication=no'
 alias tracert='traceroute'
 alias ipconfig='ifconfig'
 alias whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
