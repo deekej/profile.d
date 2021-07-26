@@ -78,7 +78,6 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
   # Network section:
   # ----------------
   alias speedtest='speedtest-cli'
-  alias wget='curl -L --remote-header-name --remote-name'
 
   #alias -- ssh-nostrict='ssh -o StrictHostKeyChecking=no'
   #alias -- scp-nostrict='scp -o StrictHostKeyChecking=no'
@@ -133,8 +132,7 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
   }
 
   # Custom launchers to workaround inconsistent desktop switching:
-  alias         bluejeans='/usr/libexec/launchers/bluejeans-v2'
-  alias      bluejeans-v2='/usr/libexec/launchers/bluejeans-v2'
+  alias         bluejeans='/usr/libexec/launchers/bluejeans'
   alias  bluejeans-events='/usr/libexec/launchers/bluejeans-events'
   alias firefox-developer='/usr/libexec/launchers/firefox-developer'
   alias           firefox='/usr/libexec/launchers/firefox'
