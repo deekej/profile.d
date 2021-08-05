@@ -66,8 +66,6 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
   # Custom hooks section:
   # ---------------------
   alias     ping='/usr/libexec/ping.hook'
-  alias    patch='/usr/libexec/patch.hook'
-  #alias     sudo='/usr/libexec/sudo.hook'
 
   # Security section:
   # -----------------
