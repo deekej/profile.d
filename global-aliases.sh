@@ -42,6 +42,7 @@ alias scp-pass='scp -o PreferredAuthentications=password -o PubkeyAuthentication
 alias tracert='traceroute'
 alias ipconfig='ifconfig'
 alias whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias wifiscan='nmcli -f ALL dev wifi'
 
 # Workflow section:
 # -----------------
