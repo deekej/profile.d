@@ -36,7 +36,7 @@ fi
 
 # Display the fortune-cookie if the system is able to, we are
 # not running as root and we are not in Tilix (Quake) Terminal:
-if [ -x /usr/bin/fortune-cookie ] && [[ ${EUID} -ne 0 ]] && [[ "${TERMINAL}" != 'tilix' ]]; then
+if [[ -x /usr/bin/fortune-cookie && ${EUID} -ne 0 && "${TERMINAL}" != 'tilix' && "${TERMINAL}" != 'terminator' ]]; then
   tput reset
   /usr/bin/fortune-cookie
 fi
