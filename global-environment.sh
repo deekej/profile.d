@@ -4,6 +4,9 @@
 # Global environment configuration common for both Bash && ZSH:
 # -------------------------------------------------------------
 
+# We don't want the cowsay to be encapsulating the Ansible playbooks... Anywhere!
+export ANSIBLE_NOCOWS=1
+
 if [[ "$(uname -n)" != Normandy-SR* ]]; then
   # Source 'kubectl' completion on k8s server:
   if command -v kubectl &> /dev/null; then
