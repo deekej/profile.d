@@ -4,13 +4,21 @@
 # Global environment configuration common for both Bash && ZSH:
 # -------------------------------------------------------------
 
+# Do nothing if we were not called from Bash or ZSH:
+[[ "${SHELL}" != *zsh && "${SHELL}" != *bash ]] && return
+
+# Don't do anything if we were already sourced:
+[ -n "${GLOBAL_ENV_SOURCED}" ] && return
+
+GLOBAL_ENV_SOURCED='true'
+
 # We don't want the cowsay to be encapsulating the Ansible playbooks... Anywhere!
 export ANSIBLE_NOCOWS=1
 
 if [[ "$(uname -n)" != Normandy-SR* ]]; then
   # Source 'kubectl' completion on k8s server:
   if command -v kubectl &> /dev/null; then
-    if [[ "$SHELL" == *bash ]]; then
+    if [[ "${SHELL}" == *bash ]]; then
       source <(kubectl completion bash)
     else
       source <(kubectl completion zsh)
@@ -21,13 +29,13 @@ if [[ "$(uname -n)" != Normandy-SR* ]]; then
   # alias foo='bar'
 else
   # Preferred editor for local and remote sessions
-  if [[ -n $SSH_CONNECTION ]]; then
+  if [[ -n "${SSH_CONNECTION}" ]]; then
     export EDITOR='vim -f'
   else
     export EDITOR='gvim -f'
   fi
 
-  if [[ "$USER" == deekej ]]; then
+  if [[ "${USER}" == deekej ]]; then
     # Enabling SSH access with GPG keys:
     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
     gpgconf --launch gpg-agent
@@ -37,10 +45,7 @@ else
   export SYSTEMD_EDITOR="/usr/bin/vim"
 
   # Go workspace:
-  export GOPATH="$HOME/build/go"
-
-  # Personal settings of working environment:
-  export GDB="cgdb"
+  export GOPATH="${HOME}/build/go"
 
   # Don't save history of searches in 'less':
   export LESSHISTFILE="/dev/null"
