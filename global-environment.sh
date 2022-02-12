@@ -52,6 +52,12 @@ else
 
   # We want this to be enabled only on local laptop:
   #export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}/usr/local/lib"
+
+  # Desktop is using nVidia GPU - make sure that everything (that can) is
+  # being rendered on it (and not via software rendering)...
+  if [[ "$(uname -n)" == Normandy-SR3* ]]; then
+    export DRI_PRIME=1
+  fi
 fi
 
 # Source the aliases after the default aliases have been set,
