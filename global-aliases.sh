@@ -14,6 +14,7 @@ fi
 
 # Usability section:
 # ------------------
+alias cp='cp -v'
 alias dd='dd conv=fsync status=progress'
 
 alias df='df -h'
