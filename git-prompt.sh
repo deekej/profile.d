@@ -166,9 +166,9 @@ _git_reset_prompt() {
 
 # Allow to change PS1 when we enter the directory with .git/ subfolder
 # (see e.g. /usr/bin/cd) and update the PS1 if we already start there:
-alias cd='. /usr/bin/cd'
-alias pushd='. /usr/bin/pushd'
-alias popd='. /usr/bin/popd'
+alias cd='. /usr/local/bin/cd'
+alias pushd='. /usr/local/bin/pushd'
+alias popd='. /usr/local/bin/popd'
 
 cd .
 
