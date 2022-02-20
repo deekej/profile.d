@@ -68,10 +68,6 @@ if [[ "$(uname -n)" == Normandy-SR* ]]; then
     alias logout='gnome-session-quit --logout --no-prompt && exit'
   fi
 
-  # Custom hooks section:
-  # ---------------------
-  alias     ping='/usr/libexec/ping.hook'
-
   # Security section:
   # -----------------
   alias su='su -'
