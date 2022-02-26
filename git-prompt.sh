@@ -150,7 +150,7 @@ _git_reset_prompt() {
     return            # Nothing to do - PS1 is not displaying git_prompt
   fi
 
-  [ -f /etc/profile.d/default-bash-prompt.sh ] && source /etc/profile.d/default-bash-prompt.sh
+  [ -f /etc/profile.d/bash-default-prompt.sh ] && source /etc/profile.d/bash-default-prompt.sh
 
   # Dir colors already enabled & evaluated, just set the correct PS1:
   if [ ${EUID} == 0 ]; then
