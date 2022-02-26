@@ -1,5 +1,7 @@
 # vim: filetype=bash
 
+[[ "${FORTUNE_COOKIE}" != 'true' ]] && return
+
 # --------------------------------- #
 
 TERMINAL="$(ps --pid ${PPID} --no-headers --format comm)"
