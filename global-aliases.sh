@@ -70,13 +70,6 @@ fi
 alias ssh-pass='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o GSSAPIAuthentication=no'
 alias scp-pass='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no -o GSSAPIAuthentication=no'
 
-# Custom functions:
-# -----------------
-function cdl()
-{
-  cd "$1" && ll
-}
-
 # -----------------------------------------------------------------------------
 
 case "$(uname -n)" in
@@ -110,6 +103,11 @@ case "$(uname -n)" in
     alias weather='curl wttr.in'
     alias -- youtube-mp3='youtube-dl --extract-audio --audio-format mp3 --audio-quality 320K --write-thumbnail'
 
+    # Additional Ansible aliases:
+    # ---------------------------
+    alias -- ansible-init-file='ansible_init_file'
+    alias -- ansible-init-layout='ansible_init_layout'
+
     # TaskWarrior:
     # ------------
     alias ta='task add'
@@ -138,20 +136,5 @@ case "$(uname -n)" in
     # Font testing:
     # -------------
     alias pango='DISPLAY=:0 FC_DEBUG=4 pango-view --font=monospace -t ☺ | grep family:'
-
-    function whatprovides()
-    {
-      local eval $(cat /etc/*-release | grep VERSION_ID)
-
-      rpm_query=$(rpm -qf "$(which --skip-alias "${1}" 2>/dev/null)" 2>/dev/null)
-
-      [[ -n "${rpm_query}" ]] && echo "${rpm_query}" && return
-
-      dnf_query=$(dnf repoquery --assumeno --disablerepo='fedora-cisco-openh264' -C --whatprovides "${1}" 2>/dev/null | grep "fc${VERSION_ID}")
-
-      [[ -n "${dnf_query}" ]] && echo "${dnf_query}" && return
-
-      echo "Nothing provides: ${1}"
-    }
     ;;
 esac

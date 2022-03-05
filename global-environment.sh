@@ -94,12 +94,15 @@ umask 022
 
 # -----------------------------------------------------------------------------
 
-# Source the aliases after the default Oh-my-zsh aliases have been set,
-# so we can override them if necessary:
+# Source the custom aliases and functions after the default Oh-my-zsh
+# aliases have been set, so we can override them if necessary:
 if [ -r /etc/profile.d/global-aliases.sh ]; then
   source /etc/profile.d/global-aliases.sh
+  source /etc/profile.d/global-functions.sh
 elif [ -r "${HOME}/.profile.d/global-aliases.sh" ]; then
   source -r "${HOME}/.profile.d/global-aliases.sh"
+  source -r "${HOME}/.profile.d/global-functions.sh"
 elif [ -r "${ZDOTDIR}/profile.d/global-aliases.sh" ]; then
   source "${ZDOTDIR}/profile.d/global-aliases.sh"
+  source "${ZDOTDIR}/profile.d/global-functions.sh"
 fi
