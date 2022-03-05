@@ -39,7 +39,10 @@ function ansible_init_layout()
 
   touch LICENSE
   touch README.md
-  touch roles/README.md
+
+  touch hosts
+  touch ansible.cfg
+  touch requirements.yml
   touch group_vars/all.yml
 
   touch collections/.gitkeep
