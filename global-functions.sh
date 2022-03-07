@@ -20,14 +20,16 @@ function cdl()
 }
 
 # Initialize empty Ansible file:
-function ansible_init_file()
+function ansible_file_init()
 {
+  [[ -s "${1}" ]] && return
+
   echo '---' >> "${1}"
   echo '# vim: filetype=yaml.ansible' >> "${1}"
 }
 
 # Initialize default directory layout for Ansible project:
-function ansible_init_layout()
+function ansible_layout_init()
 {
   mkdir -p collections
   mkdir -p filter_plugins
@@ -36,20 +38,19 @@ function ansible_init_layout()
   mkdir -p library
   mkdir -p roles
   mkdir -p module_utils
+  mkdir -p vault
 
   touch LICENSE
   touch README.md
 
   touch hosts
   touch ansible.cfg
-  touch requirements.yml
-  touch group_vars/all.yml
 
-  touch collections/.gitkeep
-  touch filter_plugins/.gitkeep
-  touch host_vars/.gitkeep
-  touch library/.gitkeep
-  touch module_utils/.gitkeep
+  # NOTE: Use this after upgrading to version 2.12 (core):
+  #ansible-config init --disabled > ansible.cfg
+
+  ansible_file_init requirements.yml
+  ansible_file_init group_vars/all.yml
 }
 
 function whatprovides()

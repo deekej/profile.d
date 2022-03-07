@@ -105,8 +105,12 @@ case "$(uname -n)" in
 
     # Additional Ansible aliases:
     # ---------------------------
-    alias -- ansible-init-file='ansible_init_file'
-    alias -- ansible-init-layout='ansible_init_layout'
+    alias apl='ansible-playbook'
+    alias ari='ansible-role-init'
+    alias afi='ansible_file_init'
+    alias ali='ansible_layout_init'
+    alias -- ansible-file-init='ansible_file_init'
+    alias -- ansible-layout-init='ansible_layout_init'
 
     # TaskWarrior:
     # ------------
