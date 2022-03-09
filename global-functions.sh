@@ -40,6 +40,8 @@ function ansible_layout_init()
   mkdir -p module_utils
   mkdir -p vault
 
+  touch .gitignore
+
   touch LICENSE
   touch README.md
 
