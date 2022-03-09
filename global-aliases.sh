@@ -125,6 +125,22 @@ case "$(uname -n)" in
     alias tda='task add project:devel'
     alias tfa='task add project:fedora'
     alias tpa='task add project:personal'
+
+    # Aliases for controlling of Toolboxes:
+    # -------------------------------------
+    alias  tb='toolbox'
+    alias tbe='toolbox enter'
+    alias tbl='toolbox list'
+    alias tbr='toolbox run'
+
+    alias       tb.tmp='toolbox --assumeyes create tmp && toolbox enter tmp && toolbox rm -f tmp'
+
+    alias     tb.devel='pushd ~/devel          &>/dev/null && toolbox enter devel     && popd &>/dev/null'
+    alias    tb.github='pushd ~/devel/github   &>/dev/null && toolbox enter devel     && popd &>/dev/null'
+    alias    tb.redhat='pushd ~/devel/redhat   &>/dev/null && toolbox enter redhat    && popd &>/dev/null'
+    alias    tb.fedora='pushd ~/devel/fedora   &>/dev/null && toolbox enter packaging && popd &>/dev/null'
+    alias  tb.upstream='pushd ~/devel/upstream &>/dev/null && toolbox enter packaging && popd &>/dev/null'
+    alias tb.packaging='pushd ~/devel          &>/dev/null && toolbox enter packaging && popd &>/dev/null'
     ;;
 
   toolbox)
