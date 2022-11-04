@@ -67,8 +67,8 @@ fi
 
 # Network section:
 # ----------------
-alias ssh-pass='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o GSSAPIAuthentication=no'
-alias scp-pass='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no -o GSSAPIAuthentication=no'
+alias ssh-pass='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o IdentitiesOnly=no'
+alias scp-pass='scp -o PreferredAuthentications=password -o PubkeyAuthentication=no -o IdentitiesOnly=no'
 
 # -----------------------------------------------------------------------------
 
