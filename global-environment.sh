@@ -100,8 +100,8 @@ if [ -r /etc/profile.d/global-aliases.sh ]; then
   source /etc/profile.d/global-aliases.sh
   source /etc/profile.d/global-functions.sh
 elif [ -r "${HOME}/.profile.d/global-aliases.sh" ]; then
-  source -r "${HOME}/.profile.d/global-aliases.sh"
-  source -r "${HOME}/.profile.d/global-functions.sh"
+  source "${HOME}/.profile.d/global-aliases.sh"
+  source "${HOME}/.profile.d/global-functions.sh"
 elif [ -r "${ZDOTDIR}/profile.d/global-aliases.sh" ]; then
   source "${ZDOTDIR}/profile.d/global-aliases.sh"
   source "${ZDOTDIR}/profile.d/global-functions.sh"
