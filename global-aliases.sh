@@ -107,7 +107,7 @@ case "$(uname -n)" in
 
     # Additional Ansible aliases:
     # ---------------------------
-    alias apl='ansible-playbook --vault-pass-file=/usr/local/bin/vault-pass-prompt'
+    alias apl='ansible-playbook --vault-password-file=/usr/local/bin/vault-pass-prompt'
     alias ari='ansible-role-init'
     alias afi='ansible_file_init'
     alias ali='ansible_layout_init'
