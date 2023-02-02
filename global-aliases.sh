@@ -79,6 +79,8 @@ case "$(uname -n)" in
       alias logout='gnome-session-quit --logout --no-prompt && exit'
     fi
 
+    alias terminator='terminator --maximize'
+
     alias xopen='xdg-open'
     alias xwayland='export QT_QPA_PLATFORM=xcb; echo "export QT_QPA_PLATFORM=xcb"'
 
