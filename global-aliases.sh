@@ -116,17 +116,17 @@ case "$(uname -n)" in
 
     # TaskWarrior:
     # ------------
-    alias ta='task add'
-    alias tl='task list'
-    alias td='task done'
-    alias tan='task annotate'
-    alias tsc='task context'
+    #alias ta='task add'
+    #alias tl='task list'
+    #alias td='task done'
+    #alias tan='task annotate'
+    #alias tsc='task context'
 
-    alias taa='task add project:accomplish'
-    alias twa='task add project:work'
-    alias tda='task add project:devel'
-    alias tfa='task add project:fedora'
-    alias tpa='task add project:personal'
+    #alias taa='task add project:accomplish'
+    #alias twa='task add project:work'
+    #alias tda='task add project:devel'
+    #alias tfa='task add project:fedora'
+    #alias tpa='task add project:personal'
 
     # Aliases for controlling of Toolboxes:
     # -------------------------------------
