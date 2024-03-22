@@ -80,14 +80,30 @@ export GCC_COLORS='error=01;31:warning=01;33:note=01;32:caret=01;32:locus=01;34:
 
 # Load up custom colors config:
 if [ -r "${HOME}/.profile.d/DIR_COLORS" ]; then
-  eval $(dircolors -b "${HOME}/.profile.d/dir_colors")
+  DIR_COLORS=$(cat "${HOME}/.profile.d/DIR_COLORS")
 elif [ -r "${ZDOTDIR}/profile.d/DIR_COLORS" ]; then
-  eval $(dircolors -b "${HOME}/.dir_colors")
+  DIR_COLORS=$(cat "${ZDOTDIR}/profile.d/DIR_COLORS")
 elif [ -r /etc/DIR_COLORS ] ; then
-  eval $(dircolors -b /etc/DIR_COLORS)
-else
-  eval $(dircolors)
+  DIR_COLORS=$(cat /etc/DIR_COLORS)
 fi
+
+if [ -n "${DIR_COLORS}" ]; then
+  export LS_COLORS=${DIR_COLORS}
+elif which dircolors > /dev/null; then
+  eval $(dircolors -b)
+fi
+
+if [[ "${SHELL}" == *zsh ]]; then
+  if [ -z "${LS_COLORS}" ]; then
+    zstyle ':completion:*:default' list-colors ''
+  else
+    zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+  fi
+
+  export CLICOLOR=1
+fi
+
+# -----------------------------------------------------------------------------
 
 # Set normal (sane) umask:
 umask 022
