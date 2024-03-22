@@ -37,15 +37,22 @@ alias duc='du -sh'
 alias  dir='vdir --color=auto'
 alias vdir='vdir --color=auto'
 
-alias ls='ls -v -CF --color=auto'
-alias la='ls -lhvAF --color=auto'
-alias li='ls -ohvAF --color=auto --group-directories-first --reverse'
-alias ll='ls -ohvAF --color=auto --group-directories-first'
-alias lt='ls -ltFh  --reverse'
+alias   ls='ls -v -CF  --color=auto'
+alias   la='ls -lhvAF  --color=auto'
+alias   lt='ls -ltFhr  --color=auto'
+alias  lls='ls -1FSshr --color=auto'
+alias llsr='ls -1FSshr --color=auto -R'
 
-alias ll.='ls -ohvAF --color=auto --group-directories-first --directory .*'
-alias lls='ls -1FSsh --reverse'
-alias llsr='ls -1FSsh --reverse --recursive'
+# macOS doesn't support directories grouping with 'ls' command:
+if [[ "$(uname)" == Darwin ]]; then
+  alias  ll='ls -ohvAF --color=auto '
+  alias  li='ls -ohvAF --color=auto -r'
+  alias ll.='ls -ohvAF --color=auto -d .*'
+else
+  alias  ll='ls -ohvAF --color=auto --group-directories-first'
+  alias  li='ls -ohvAF --color=auto --group-directories-first -r'
+  alias ll.='ls -ohvAF --color=auto --group-directories-first -d .*'
+fi
 
 alias tree='tree -a'
 
