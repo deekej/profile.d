@@ -87,7 +87,7 @@ elif [ -r /etc/DIR_COLORS ] ; then
   DIR_COLORS=$(cat /etc/DIR_COLORS)
 fi
 
-if [ -n "${DIR_COLORS}" ]; then
+if [[ "$(uname)" == Darwin && -n "${DIR_COLORS}" ]]; then
   export LS_COLORS=${DIR_COLORS}
 elif which dircolors > /dev/null; then
   eval $(dircolors -b)
